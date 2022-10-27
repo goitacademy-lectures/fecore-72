@@ -18,6 +18,8 @@
 
   /* Others */
   --btn-radius: 25px;
+  --indent: 30px;
+  --items: 3;
 }
 
 /**
@@ -155,6 +157,22 @@ img {
 
 /**
   |============================
+  | Card set
+  |============================
+*/
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / (var(--items)));
+}
+
+/**
+  |============================
   | Header
   |============================
 */
@@ -162,8 +180,31 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 132px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 .header-nav-link,
 .header-contact {
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -177,6 +218,12 @@ img {
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-txt-cl);
+}
+
+.header-group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 /**
@@ -224,9 +271,23 @@ img {
   | About
   |============================
 */
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  margin-right: 30px;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .about-right-side {
   width: 470px;
 }
+
 .about-desc {
   margin-bottom: 42px;
 
@@ -245,8 +306,44 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.price-block {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 44px;
+}
+
+.price-list {
+  flex-basis: 570px;
+
+  padding: 30px 20px;
+  outline: 2px solid green;
+}
+
 .price-item {
+  display: flex;
+  align-items: baseline;
+
   color: var(--grey-cl);
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.line {
+  display: block;
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-btn {
+  display: block;
+  margin: 0 auto;
 }
 
 /**
@@ -290,6 +387,8 @@ img {
 }
 
 .team-name {
+  margin-bottom: 8px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -305,11 +404,25 @@ img {
 
   color: var(--accent-txt-cl);
 }
+
+.team-wrapper {
+  padding: 30px 10px;
+
+  /* border: 5px dashed green;
+  border-top: none; */
+}
+
+.socials {
+  display: none;
+}
 /**
   |============================
   | Gallery
   |============================
 */
+.gallery-list {
+  --items: 4;
+}
 /**
   |============================
   | Booking
