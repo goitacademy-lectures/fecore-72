@@ -1,6 +1,9 @@
 # MacOS folder files
 .DS_Store
 
+#Exclude icons folder
+icons
+
 # Logs
 logs
 *.log
