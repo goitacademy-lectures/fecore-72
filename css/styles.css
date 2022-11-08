@@ -20,6 +20,9 @@
   --btn-radius: 25px;
   --indent: 30px;
   --items: 3;
+  --header-idx: 10;
+  --modal-idx: 100;
+  --menu-idx: 1000;
 }
 
 /**
@@ -59,6 +62,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* reset end */
 
@@ -191,7 +196,17 @@ img {
   |============================
 */
 .header {
-  background-color: var(--dark-bg-cl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--header-idx);
+
+  width: 100%;
+}
+
+.header.no-transparency {
+  background-color: rgba(25, 28, 38, 0.7);
+  backdrop-filter: blur(3px);
 }
 
 .header-container {
@@ -200,18 +215,15 @@ img {
 }
 
 .header-link {
-  /* width: 68px;
-  height: 56px; */
   margin-right: 132px;
-
-  /* background-image: url(../images/icons/logo.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
 }
 
 .header-logo {
   fill: #303030;
+}
+
+.header.no-transparency .header-logo {
+  fill: #ffffff;
 }
 
 .header-nav {
@@ -259,6 +271,7 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
+  padding-right: 20px;
 }
 
 /**
@@ -266,8 +279,14 @@ img {
   | Hero
   |============================
 */
-.hero {
-  background-color: #191c26;
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .media-list {
@@ -300,11 +319,60 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.hero-right-side {
+  position: relative;
+
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 208px;
+  padding-left: 100px;
+
+  background-color: rgba(25, 28, 38, 0.2);
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .hero-undertitle {
   width: 360px;
 }
 
+.slider-pagination {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 15px);
+}
+
+.slider-pagination-item {
+  margin-left: auto;
+  width: 8px;
+  height: 2px;
+  background-color: #9da4bd;
+}
+.slider-pagination-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.slider-pagination-item.active {
+  width: 18px;
+  background-color: #fff;
+}
+
+.slider-list {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .slider-btn {
+  width: 60px;
+  height: 24px;
+  padding: 0;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -313,8 +381,22 @@ img {
   color: var(--light-txt-cl);
 
   background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
 
   cursor: pointer;
+}
+
+.slider-btn.prev {
+  text-align: left;
+}
+.slider-btn.next {
+  text-align: right;
+}
+
+.slider-btn[disabled] {
+  color: rgba(157, 164, 189, 0.6);
+  border-color: rgba(157, 164, 189, 0.6);
 }
 
 /**
@@ -420,7 +502,47 @@ img {
   | Benefits
   |============================
 */
+
+.benefits-container {
+  display: flex;
+  gap: 30px;
+}
+
+.benefits-left-side {
+  width: 50%;
+}
+
+.benefits-right-side {
+  width: 500px;
+}
+
+.benefits-list {
+  width: 370px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.benefits-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.benefits-item:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .benefits-quantity {
+  position: relative;
+
+  display: inline-block;
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
@@ -430,7 +552,13 @@ img {
   color: #303030;
 }
 
-.benefits-decor {
+.benefits-quantity::after {
+  content: '+';
+
+  position: absolute;
+  top: 7px;
+  right: -15px;
+
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -531,6 +659,28 @@ img {
 
 .gallery-list {
   --items: 4;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: rgba(25, 28, 38, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+.overlay-text {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 /**
   |============================
