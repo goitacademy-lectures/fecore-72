@@ -85,9 +85,6 @@ img {
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  /* outline: 2px solid red; */
-  outline-offset: -2px;
 }
 
 .main-title {
@@ -699,9 +696,6 @@ img {
 
 .team-wrapper {
   padding: 30px 10px;
-
-  /* border: 5px dashed green;
-  border-top: none; */
 }
 
 .socials {
@@ -733,16 +727,6 @@ img {
 .socials-icon {
   fill: currentColor;
 }
-
-/* розширений варіант зміни заливки іконки */
-/* .socials-icon {
-  fill: #303030;
-}
-
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: #ff6c00;
-} */
 
 /**
   |============================
@@ -896,9 +880,6 @@ img {
   left: 0;
   z-index: var(--modal-idx);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
 
@@ -915,11 +896,11 @@ img {
 }
 
 .modal {
-  /* position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: center;
-  transform: translateX(-50%) translateY(-50%); */
+
+  transform: translateX(-50%) translateY(-50%);
 
   width: 400px;
   min-height: 500px;
@@ -927,12 +908,7 @@ img {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-  /* transition: transform var(--anim-fast), opacity var(--anim-fast); */
-
-  animation-duration: 0.6s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-out;
+  animation: 0.6s ease-out both;
 }
 
 .modal.modal-animation {
@@ -1019,11 +995,11 @@ img {
 
 @keyframes swirl-in-fwd {
   0% {
-    transform: rotate(-540deg) scale(0);
+    transform: translate(-50%, -50%) rotate(-540deg) scale(0);
     opacity: 0;
   }
   100% {
-    transform: rotate(0) scale(1);
+    transform: translate(-50%, -50%) rotate(0) scale(1);
     opacity: 1;
   }
 }
@@ -1050,4 +1026,18 @@ img {
     transform: scale(1);
     animation-timing-function: ease-out;
   }
+}
+
+/**
+  |============================
+  | Form
+  |============================
+*/
+
+textarea {
+  display: block;
+  width: 400px;
+  min-height: 100px;
+  max-height: 300px;
+  resize: vertical;
 }
