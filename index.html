@@ -40,31 +40,31 @@
   <body>
     <!-- Header section -->
     <header class="header" data-header>
-      <div class="header-container container">
-        <a class="header-link" href="" aria-label="Barbershop logo">
-          <svg class="header-logo" width="68" height="56">
+      <div class="header__container container">
+        <a class="header__logo logo" href="" aria-label="Barbershop logo">
+          <svg class="logo__img" width="68" height="56">
             <use href="./images/icons.svg#logo"></use>
           </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="header-list list">
-            <li class="header-item">
-              <a class="header-nav-link link" href="#about">About</a>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--current link" href="#about">About</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#price">Services and prices</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#price">Services and prices</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#team">Barbers</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#team">Barbers</a>
             </li>
-            <li class="header-item">
-              <a class="header-nav-link link" href="#contacts">Contacts</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-group">
-          <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="header-btn btn btn-theme-dark" type="button" data-modal-open>
+        <div class="header__group">
+          <a class="header__contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="header__btn btn btn--theme-dark" type="button" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -86,11 +86,11 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="hero-uppertitle uppertitle uppertitle-theme-dark">
+            <p class="hero-uppertitle uppertitle uppertitle--theme-dark">
               A hair salon for men in Kyiv
             </p>
             <h1 class="hero-title main-title">BarberShop</h1>
-            <p class="hero-undertitle undertitle undertitle-theme-dark">
+            <p class="hero-undertitle undertitle undertitle--theme-dark">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
 
@@ -153,8 +153,8 @@
       <!-- Price section -->
       <section class="price section" id="price">
         <div class="container">
-          <p class="uppertitle uppertitle-theme-dark">spend your time with the best masters</p>
-          <h2 class="title title-theme-dark">Services and prices</h2>
+          <p class="uppertitle uppertitle--theme-dark">spend your time with the best masters</p>
+          <h2 class="title title--theme-dark">Services and prices</h2>
           <div class="price-block">
             <ul class="price-list list">
               <li class="price-item">
@@ -185,7 +185,7 @@
               </li>
             </ul>
           </div>
-          <button class="price-btn btn btn-theme-dark" type="button">online-booking</button>
+          <button class="price-btn btn btn--theme-dark" type="button">online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
@@ -227,7 +227,7 @@
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
           <ul class="team-list card-set list">
-            <li class="team-item card-set-item">
+            <li class="team-item card-set__item">
               <div class="team-thumb">
                 <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
                 <div class="overlay">
@@ -296,7 +296,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item card-set-item">
+            <li class="team-item card-set__item">
               <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
               <div class="team-wrapper">
                 <h3 class="team-name">Michele Doe</h3>
@@ -357,7 +357,7 @@
                 </ul>
               </div>
             </li>
-            <li class="team-item card-set-item">
+            <li class="team-item card-set__item">
               <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
               <div class="team-wrapper">
                 <h3 class="team-name">Alan Black</h3>
@@ -427,7 +427,7 @@
           <p class="gallery-uppertitle uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden>Our gallery</h2>
           <ul class="gallery-list card-set list">
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -436,7 +436,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -445,7 +445,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -454,7 +454,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -470,7 +470,7 @@
       <div class="contatcs-group">
         <div class="container contatcs-container">
           <section class="booking section">
-            <h2 class="title title-theme-dark">Online-booking</h2>
+            <h2 class="title title--theme-dark">Online-booking</h2>
             <form class="booking-form" name="booking_form">
               <div class="booking-group">
                 <label class="booking-group-field">
@@ -504,11 +504,11 @@
                 ></textarea>
                 <span class="booking-label">Message</span>
               </label>
-              <button class="btn btn-theme-dark" type="submit">send</button>
+              <button class="btn btn--theme-dark" type="submit">send</button>
             </form>
           </section>
           <section class="contacts section" id="contacts">
-            <h2 class="title title-theme-dark">Contacts</h2>
+            <h2 class="title title--theme-dark">Contacts</h2>
             <address class="contacts-address">
               <ul class="contacts-list list">
                 <li class="contacts-item">
@@ -572,7 +572,7 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal" data-modal-window>
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="18" height="18">
@@ -624,12 +624,12 @@
             ></textarea>
           </div>
           <div class="modal-form-agreement" role="group">
-            <input class="modal-form-checkbox" type="checkbox" id="user_agreement" />
-            <!-- <svg class="modal-form-agreement-icon" width="18" height="16">
-              <use class="uncheck" href="./images/icons.svg#icon-uncheck"></use>
-              <use class="check" href="./images/icons.svg#icon-check"></use>
-            </svg> -->
             <label class="modal-form-agreement-desc" for="user_agreement">
+              <input class="modal-form-checkbox" type="checkbox" id="user_agreement" />
+              <svg class="modal-form-agreement-icon" width="18" height="16">
+                <use class="uncheck" href="./images/icons.svg#icon-uncheck"></use>
+                <use class="check" href="./images/icons.svg#icon-check"></use>
+              </svg>
               Погоджуюся з розсилкою та приймаю
               <a class="modal-form-agreement-link" href="">Умови договору</a>
             </label>
