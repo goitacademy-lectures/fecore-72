@@ -1,0 +1,41 @@
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-media-list {
+  transform: rotate(-90deg) translateY(40px);
+  transform-origin: left;
+}
+
+.hero-right-side {
+  position: relative;
+
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 208px;
+  padding-left: 100px;
+
+  background-color: rgba(25, 28, 38, 0.2);
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-uppertitle {
+  animation: top-to-bottom 1000ms ease 200ms both;
+}
+
+.hero-title {
+  animation: left-to-right 1000ms ease 1200ms both;
+}
+
+.hero-undertitle {
+  width: 360px;
+  animation: bottom-to-top 1000ms ease 2200ms both;
+}

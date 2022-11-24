@@ -1,0 +1,8 @@
+.logo__img {
+  fill: #303030;
+
+  transition: fill var(--anim-slow);
+}
+.header--no-transparency .logo__img {
+  fill: #ffffff;
+}

@@ -1,0 +1,85 @@
+.booking-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 44px;
+}
+
+.booking-group-field {
+  position: relative;
+  flex-basis: 270px;
+}
+
+.booking-group-field:not(:last-child) {
+  margin-right: 30px;
+}
+
+.booking-field,
+.booking-message {
+  width: 100%;
+  height: 24px;
+
+  color: #ffffff;
+  outline: unset;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  transition: border-color var(--anim-fast);
+}
+
+.booking-field:focus,
+.booking-field:not(:placeholder-shown),
+.booking-message:focus,
+.booking-message:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.booking-field::placeholder,
+.booking-message::placeholder {
+  opacity: 0;
+  font-size: 14px;
+  color: #9da4bd;
+  transition: opacity var(--anim-fast);
+}
+
+.booking-field:focus::placeholder,
+.booking-message:focus::placeholder {
+  opacity: 1;
+  transition-delay: 200ms;
+}
+
+.booking-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+
+  transform-origin: left;
+  transition: transform var(--anim-fast), color var(--anim-fast);
+}
+
+.booking-field:focus + .booking-label,
+.booking-field:not(:placeholder-shown) + .booking-label,
+.booking-message:focus + .booking-label,
+.booking-message:not(:placeholder-shown) + .booking-label {
+  transform: translateY(-100%) scale(0.8);
+  color: #ffffff;
+}
+
+.booking-field + .booking-label::after {
+  content: '*';
+  color: #ff6c00;
+}
+
+.booking-message {
+  height: 76px;
+  resize: none;
+}

@@ -1,0 +1,73 @@
+.contatcs-group {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--dark-bg-cl);
+  background-image: url(../images/booking/booking-bg.png);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 423px) top 50%;
+}
+
+.contatcs-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts,
+.booking {
+  width: 570px;
+}
+
+.contacts {
+  padding-left: 100px;
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+  font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: var(--grey-cl);
+}
+
+.contacts-text {
+  font-weight: 700;
+}
+
+.contacts-item:first-child .contacts-icon {
+  margin-top: 6px;
+  align-self: baseline;
+}
+.contacts-uppertitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--light-txt-cl);
+}
+
+.contacts-uppertitle:before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: rgba(157, 164, 189, 0.4);
+}
+
+.contacts-schedule {
+  color: var(--grey-cl);
+}
