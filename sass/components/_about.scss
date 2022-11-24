@@ -1,0 +1,29 @@
+.about {
+  @extend %section;
+}
+
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  margin-right: 30px;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-right-side {
+  width: 470px;
+}
+
+.about-desc {
+  margin-bottom: 42px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
+  color: var(--dark-txt-cl);
+}

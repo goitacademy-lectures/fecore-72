@@ -1,0 +1,15 @@
+.gallery {
+  @extend %section;
+}
+
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  --items: 4;
+}
+
+.gallery-item {
+  position: relative;
+}

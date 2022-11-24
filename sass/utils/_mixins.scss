@@ -1,0 +1,44 @@
+@mixin section($pt: 120px, $pb: $pt) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin fonts($size: false, $colour: false, $weight: false, $lh: false, $ls: 0.1em) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh / $size;
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+  @if $colour {
+    color: $colour;
+  }
+}
+
+@mixin transition($property...) {
+  transition-property: $property;
+  transition-duration: 300px;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@mixin positioningrElement($positionX: 50%, $positionY: $positionX, $mode: center) {
+  position: absolute;
+  left: $positionX;
+  top: $positionY;
+  @if ($mode == 'center') {
+    transform: translateX(-1 * $positionX) translateY(-1 * $positionY);
+  }
+  @if ($mode == 'right') {
+    transform: translateX(-1 * $positionX);
+  }
+}
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

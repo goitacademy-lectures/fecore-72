@@ -1,0 +1,60 @@
+/**
+  |============================
+  | Header
+  |============================
+*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--header-idx);
+
+  width: 100%;
+
+  transition: background-color var(--anim-slow), backdrop-filter var(--anim-slow);
+}
+.header--no-transparency {
+  background-color: rgba(25, 28, 38, 0.7);
+  backdrop-filter: blur(3px);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 132px;
+}
+.header__group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 20px;
+}
+.header__contact {
+  position: relative;
+
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+
+  transition: color var(--anim-fast);
+}
+.header__contact:hover,
+.header__contact:focus {
+  color: var(--accent-txt-cl);
+}
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__btn {
+  animation: heartbeat 5s ease-in-out infinite both;
+}
