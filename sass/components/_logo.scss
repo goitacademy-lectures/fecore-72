@@ -1,7 +1,10 @@
 .logo__img {
-  fill: #303030;
-
+  fill: #ffffff;
   transition: fill var(--anim-slow);
+
+  @media screen and (min-width: 768px) {
+    fill: #303030;
+  }
 }
 .header--no-transparency .logo__img {
   fill: #ffffff;

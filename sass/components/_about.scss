@@ -1,29 +1,44 @@
 .about {
   @extend %section;
 }
-
 .about-container {
   display: flex;
 }
-
 .about-list {
   display: flex;
-  margin-right: 30px;
-}
+  gap: 30px;
 
-.about-item:not(:last-child) {
   margin-right: 30px;
-}
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+.about-item {
+  overflow: hidden;
+}
+.about-img {
+  transition: transform 1000ms ease;
+
+  .about-item:hover & {
+    transform: scale(1.2);
+  }
+}
 .about-right-side {
-  width: 470px;
-}
+  max-width: 330px;
 
+  @media screen and (min-width: 1200px) {
+    max-width: 470px;
+  }
+}
 .about-desc {
   margin-bottom: 42px;
 
-  font-size: 14px;
-  line-height: calc(26 / 14);
-  letter-spacing: 0.02em;
+  @include fonts(14px, 26px);
+
   color: var(--dark-txt-cl);
 }

@@ -2,10 +2,15 @@
   margin-bottom: 20px;
 
   font-family: var(--secondary-font);
-  font-size: 72px;
+  font-size: 48px;
+
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--light-txt-cl);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 72px;
+  }
 }
 
 .uppertitle {
@@ -13,7 +18,7 @@
   align-items: center;
   margin-bottom: 20px;
 
-  @include fonts(11px, false, 600, 15px);
+  @include fonts(11px, 15px, 600);
 
   text-transform: uppercase;
 }
@@ -38,9 +43,13 @@
   margin-bottom: 20px;
 
   font-family: var(--secondary-font);
-  font-size: 42px;
+  font-size: 28px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
+
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+  }
 }
 
 .title--theme-dark {
