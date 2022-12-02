@@ -303,8 +303,6 @@ img {
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -603,7 +601,17 @@ img {
   .hero {
     padding-top: 208px;
     padding-bottom: 209px;
-    background: rgba(25, 28, 38, 0.2);
+    background-color: rgba(25, 28, 38, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/hero/bg_sm@1x.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero/bg_sm@1x.jpg");
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/hero/bg_sm@2x.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero/bg_sm@2x.jpg");
   }
 }
 
@@ -636,10 +644,28 @@ img {
         -ms-flex-positive: 1;
             flex-grow: 1;
     background-color: #191c26;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url(../images/hero/slider-img.jpg);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/slider-img.jpg);
     background-size: cover;
     background-position: center;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/hero/bg_md@1x.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero/bg_md@1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-right-side {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/hero/bg_md@2x.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero/bg_md@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-right-side {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/hero/bg_lg@1x.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero/bg_lg@1x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-right-side {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/hero/bg_lg@2x.jpg");
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero/bg_lg@2x.jpg");
   }
 }
 
@@ -895,10 +921,35 @@ img {
   max-width: 1600px;
   margin: 0 auto;
   background-color: var(--dark-bg-cl);
-  background-image: url(../images/price/price-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url("../images/price/img_sm@1x.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/price/img_sm@2x.png");
+  }
+}
+@media screen and (min-width: 481px) {
+  .price {
+    background-image: url("../images/price/img_md@1x.png");
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/price/img_md@2x.png");
+  }
+}
+@media screen and (min-width: 769px) {
+  .price {
+    background-image: url("../images/price/img_lg@1x.png");
+  }
+}
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/price/img_lg@2x.png");
+  }
 }
 
 .price-block {
