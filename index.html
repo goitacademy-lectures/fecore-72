@@ -131,22 +131,58 @@
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/img-1.jpg"
-                alt="Beard shaving"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-1_lg@1x.webp 1x, ./images/about/img-1_lg@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-1_lg@1x.jpg 1x, ./images/about/img-1_lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-1_md@1x.webp 1x, ./images/about/img-1_md@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-1_md@1x.jpg 1x, ./images/about/img-1_md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img src="./images/about/img-1_md@1x.jpg" alt="Beard shaving" loading="lazy" />
+              </picture>
             </li>
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/img-2.jpg"
-                alt="Haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-2_lg@1x.webp 1x, ./images/about/img-2_lg@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-2_lg@1x.jpg 1x, ./images/about/img-2_lg@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-2_md@1x.webp 1x, ./images/about/img-2_md@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-2_md@1x.jpg 1x, ./images/about/img-2_md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img src="./images/about/img-2_md@1x.jpg" alt="Haircut" loading="lazy" />
+              </picture>
             </li>
           </ul>
           <div class="about-right-side">
@@ -244,7 +280,30 @@
           <ul class="team-list card-set list">
             <li class="team-item card-set__item">
               <div class="team-thumb">
-                <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+                <picture>
+                  <!-- desktop screen -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/team/img1_lg@1x.jpg 1x, ./images/team/img1_lg@2x.jpg 2x"
+                  />
+                  <!-- tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/img1_md@1x.jpg 1x, ./images/team/img1_md@2x.jpg 2x"
+                  />
+                  <!-- phone screen -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/team/img1_sm@1x.jpg 1x, ./images/team/img1_sm@2x.jpg 2x"
+                  />
+                  <img
+                    src="./images/team/img1_md@1x.jpg"
+                    alt="John Smith"
+                    width="450"
+                    height="346"
+                    loading="lazy"
+                  />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellat
@@ -312,7 +371,30 @@
               </div>
             </li>
             <li class="team-item card-set__item">
-              <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img2_lg@1x.jpg 1x, ./images/team/img2_lg@2x.jpg 2x"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img2_md@1x.jpg 1x, ./images/team/img2_md@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img2_sm@1x.jpg 1x, ./images/team/img2_sm@2x.jpg 2x"
+                />
+                <img
+                  src="./images/team/img2_md@1x.jpg"
+                  alt="Michele Doe"
+                  width="450"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-name">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -373,7 +455,30 @@
               </div>
             </li>
             <li class="team-item card-set__item">
-              <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img3_lg@1x.jpg 1x, ./images/team/img3_lg@2x.jpg 2x"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img3_md@1x.jpg 1x, ./images/team/img3_md@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img3_sm@1x.jpg 1x, ./images/team/img3_sm@2x.jpg 2x"
+                />
+                <img
+                  src="./images/team/img3_md@1x.jpg"
+                  alt="Alan Black"
+                  width="450"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-name">Alan Black</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -445,36 +550,80 @@
             <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
-                src="./images/gallery/gallery-img-1.jpg"
+                srcset="
+                  ./images/gallery/img-1_270.jpg 270w,
+                  ./images/gallery/img-1_330.jpg 330w,
+                  ./images/gallery/img-1_418.jpg 418w,
+                  ./images/gallery/img-1_540.jpg 540w,
+                  ./images/gallery/img-1_660.jpg 660w,
+                  ./images/gallery/img-1_836.jpg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
+                src="./images/gallery/img-1_418.jpg"
                 alt="gallery"
-                width="270"
+                loading="lazy"
+                width="418"
                 height="360"
               />
             </li>
             <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
-                src="./images/gallery/gallery-img-2.jpg"
+                srcset="
+                  ./images/gallery/img-2_270.jpg 270w,
+                  ./images/gallery/img-2_330.jpg 330w,
+                  ./images/gallery/img-2_418.jpg 418w,
+                  ./images/gallery/img-2_540.jpg 540w,
+                  ./images/gallery/img-2_660.jpg 660w,
+                  ./images/gallery/img-2_836.jpg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
+                src="./images/gallery/img-2_418.jpg"
                 alt="gallery"
-                width="270"
+                loading="lazy"
+                width="418"
                 height="360"
               />
             </li>
             <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
+                srcset="
+                  ./images/gallery/img-3_270.jpg 270w,
+                  ./images/gallery/img-3_330.jpg 330w,
+                  ./images/gallery/img-3_418.jpg 418w,
+                  ./images/gallery/img-3_540.jpg 540w,
+                  ./images/gallery/img-3_660.jpg 660w,
+                  ./images/gallery/img-3_836.jpg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
                 src="./images/gallery/gallery-img-3.jpg"
                 alt="gallery"
-                width="270"
+                loading="lazy"
+                width="418"
                 height="360"
               />
             </li>
             <li class="gallery-item card-set__item">
               <img
                 class="gallery-img"
+                srcset="
+                  ./images/gallery/img-4_270.jpg 270w,
+                  ./images/gallery/img-4_330.jpg 330w,
+                  ./images/gallery/img-4_418.jpg 418w,
+                  ./images/gallery/img-4_540.jpg 540w,
+                  ./images/gallery/img-4_660.jpg 660w,
+                  ./images/gallery/img-4_836.jpg 836w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,
+              100vw"
                 src="./images/gallery/gallery-img-4.jpg"
                 alt="gallery"
-                width="270"
+                loading="lazy"
+                width="418"
                 height="360"
               />
             </li>
@@ -587,7 +736,7 @@
     </footer>
 
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal" data-modal-window>
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="18" height="18">
@@ -652,7 +801,7 @@
           <button class="modal-form-btn btn" type="submit">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!-- Mobile menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
